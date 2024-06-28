@@ -1,0 +1,197 @@
+:root {
+    --light-green: #5bbb5e;
+    --dark-green: #348238;
+    --dark-orange: #FF5722;
+    --middle-blue: #303F9F;
+    --white: #fff;
+    --black: #131010;
+    --very-dark-grey: #121212;
+    --dark-grey: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif
+
+}
+
+li{
+    margin-right: 100px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+}
+
+li,
+img {
+    width: 50px;
+    margin: 0px 0px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#titleHome {
+    font-size: 3em;
+    color: var(--white);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark-green);
+    padding: 5px 5%;
+}
+
+body {
+    background-color: var(--dark-grey);
+}
+
+.online{
+    position: relative;
+}
+
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    background: var(--light-green);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ************************************************************************** */
+
+#logoutButton {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* ************************************************************************** */
+/* 
+#loginRegister {
+    display: flex;
+    flex-direction: row;
+    height: 88vh;
+    width: 100%;
+    align-items: center;
+    gap: 10%;
+}
+
+@media (max-width: 650px) {
+    #loginRegister {
+        flex-direction: column;
+    }
+}
+
+#welcomText {
+    color: var(--white);
+    font-size: 2.2em;
+    margin-left: 10vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    width: fit-content;
+    height: fit-content;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 300px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-green);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--dark-green);
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    color: var(--light-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.form-container.fade-out {
+    opacity: 0;
+}
+
+.form-container {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+} */
