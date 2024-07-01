@@ -2,19 +2,21 @@ const createPostButton = document.getElementById('createPostButton');
 const modal = document.getElementById('createPostModal')
 const createPostForm = document.getElementById('createPostForm')
 const categorieError = document.getElementById('categorieError');
-
+const notif = document.getElementById('notif')
+const notifModal = document.getElementById('notifModal')
 function openModal() {
     modal.style.display = 'block';
 }
 
 function closeModal() {
     modal.style.display = 'none';
+    notifModal.style.display = 'none';
 }
 
 window.onclick = function(event) {
-    if (event.target === modal) {
+    if (event.target === modal || event.target === notifModal) {
         closeModal();
-    }
+    } 
 }
 
 createPostButton.addEventListener('click',function (event) {
@@ -37,6 +39,10 @@ createPostForm.addEventListener("submit", (event) => {
 
     console.log(data);
 })
+
+notif.addEventListener("click",(event)=>{
+    notifModal.style.display = "block"
+});
 
 
 function getDataForm(form) {
