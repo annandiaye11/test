@@ -14,68 +14,74 @@
         <!-- *********************************************************************************** -->
         <div id="home">
 
-
-
             <div id="createPostModal" class="modal">
                 <div class="createPost">
-                    <form>
+                    <form id="createPostForm">
                         <div class="containerFormCreatePost">
                             <h1 id="createPostTitle">Create a Post</h1>
                             <hr>
-    
+
                             <label for="psw"><b>Description:</b></label>
-                            <input type="text" placeholder="Enter Description" name="psw" id="psw" required>
-    
-    
+                            <input type="text" placeholder="Enter Description" name="description" id="psw" required>
+
+
                             <div class="categorieCreatePost">
                                 <fieldset>
                                     <legend>Choose categories</legend>
                                     <div class="createPostCheckboxContainer">
                                         <label>
-                                            <input type="checkbox" name="options" value="option1">
+                                            <input type="checkbox" name="categories" value="Anime">
                                             Anime
                                         </label>
                                         <label>
-                                            <input type="checkbox" name="options" value="option2">
+                                            <input type="checkbox" name="categories" value="Manga">
                                             Manga
                                         </label>
                                         <label>
-                                            <input type="checkbox" name="options" value="option3">
+                                            <input type="checkbox" name="categories" value="Politique">
                                             Politique
                                         </label>
                                         <label>
-                                            <input type="checkbox" name="options" value="option4">
+                                            <input type="checkbox" name="categories" value="Sport">
                                             Sport
                                         </label>
                                         <label>
-                                            <input type="checkbox" name="options" value="option4">
+                                            <input type="checkbox" name="categories" value="Science">
                                             Science
                                         </label>
                                         <label>
-                                            <input type="checkbox" name="options" value="option4">
+                                            <input type="checkbox" name="categories" value="Culture">
                                             Culture
                                         </label>
                                         <label>
-                                            <input type="checkbox" name="options" value="option4">
+                                            <input type="checkbox" name="categories" value="Gaming">
                                             Gaming
                                         </label>
                                     </div>
                                 </fieldset>
+                                <p id="categorieError" style="color:red; display:none;">Please select at least one
+                                    category.</p>
                             </div>
-    
+
                             <div class="fileCreatePost">
                                 <label for="file-upload"><b>Choose a file:</b></label>
                                 <input type="file" id="file" aria-label="File browser example">
                                 <span class="file-custom"></span>
                             </div>
-    
-                            <button class="submitbtn">SUBMIT</button>
+
+                            <button type="submit" id="createPostSubmitButton">SUBMIT</button>
                         </div>
                     </form>
                 </div>
             </div>
 
+            <div id="chatModal" class="modal">
+                <div class="chat">
+                    <form id="chatForm">
 
+                    </form>
+                </div>
+            </div>
 
             <nav>
                 <div class="nav-left">
@@ -83,8 +89,8 @@
                 </div>
                 <div class="nav-right">
                     <ul>
-                        <li><img src="./static/images/notification.svg"></li>
-                        <li><img src="./static/images/log-out.svg"></li>
+                        <li><img class="shrink" src="./static/images/notification.svg"></li>
+                        <li><img class="shrink" src="./static/images/log-out.svg"></li>
                     </ul>
                 </div>
             </nav>
@@ -120,9 +126,9 @@
                         <img src="./static/images/posts/Itachi.jpg" class="postImage">
 
                         <div class="postRow">
-                            <div> <img src="./static/images/thumbs-up.svg"> 1403</div>
-                            <div> <img src="./static/images/thumbs-down-green.svg"> 126</div>
-                            <div> <img src="./static/images/comments-regular.svg"> 1315</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-up.svg"> 1403</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-down-green.svg"> 126</div>
+                            <div> <img class="shrink" src="./static/images/comments-regular.svg"> 1315</div>
                         </div>
                     </div>
 
@@ -144,9 +150,9 @@
                         <img src="./static/images/posts/JELEE.png" class="postImage">
 
                         <div class="postRow">
-                            <div> <img src="./static/images/thumbs-up-green.svg"> 925</div>
-                            <div> <img src="./static/images/thumbs-down.svg"> 5</div>
-                            <div> <img src="./static/images/comments-regular.svg"> 355</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-up-green.svg"> 925</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-down.svg"> 5</div>
+                            <div> <img class="shrink" src="./static/images/comments-regular.svg"> 355</div>
                         </div>
                     </div>
 
@@ -168,9 +174,9 @@
                         <img src="./static/images/posts/TanakAiko.jpeg" class="postImage">
 
                         <div class="postRow">
-                            <div> <img src="./static/images/thumbs-up-green.svg"> 121</div>
-                            <div> <img src="./static/images/thumbs-down.svg"> 54</div>
-                            <div> <img src="./static/images/comments-regular.svg"> 39</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-up-green.svg"> 121</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-down.svg"> 54</div>
+                            <div> <img class="shrink" src="./static/images/comments-regular.svg"> 39</div>
                         </div>
                     </div>
 
@@ -192,9 +198,9 @@
                         <img src="./static/images/posts/Amiya.jpg" class="postImage">
 
                         <div class="postRow">
-                            <div> <img src="./static/images/thumbs-up.svg"> 21</div>
-                            <div> <img src="./static/images/thumbs-down.svg"> 0</div>
-                            <div> <img src="./static/images/comments-regular.svg"> 2</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-up.svg"> 21</div>
+                            <div> <img class="shrink" src="./static/images/thumbs-down.svg"> 0</div>
+                            <div> <img class="shrink" src="./static/images/comments-regular.svg"> 2</div>
                         </div>
                     </div>
 
@@ -209,21 +215,21 @@
                             <h4>Messages</h4>
                         </div>
 
-                        <div class="onlineList">
+                        <div class="onlineList shrink">
                             <div class="online">
                                 <img src="./static/images/user-alt.svg">
                             </div>
                             <p>Tanaka Aiko</p>
                         </div>
 
-                        <div class="onlineList">
+                        <div class="onlineList shrink">
                             <div class="online">
                                 <img src="./static/images/user-alt.svg">
                             </div>
                             <p>JELEE</p>
                         </div>
 
-                        <div class="onlineList">
+                        <div class="onlineList shrink">
                             <div class="online">
                                 <img src="./static/images/user-alt.svg">
                             </div>
