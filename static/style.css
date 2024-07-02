@@ -303,32 +303,35 @@ legend {
 
 .createPostCheckboxContainer label {
   flex: 1 1 30%;
-  /* Adjust percentage for different number of options per line */
   margin: 5px;
 }
 
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1000;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.437);
-  /* Black w/ opacity */
+}
+
+.createPost {
+  background-color: var(--white);
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 450px;
+  border: 2px solid var(--dark-green);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .notifInfo {
   display: flex;
-  border: 2px solid var(--dark-green);
+  border: 2px solid var(--white);
+  background-color: var(--white);
   border-radius: 10px;
   align-items: center;
   height: 40px;
@@ -336,42 +339,56 @@ legend {
   flex-direction: row;
   margin-bottom: 10px;
 }
-.createPost {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 450px;
-  border: 2px solid var(--dark-green);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+#notifTitle {
+  color: var(--white);
+  text-align: center;
 }
+
+#hrNotif{
+  border: 1px solid var(--white);
+  margin-bottom: 25px;
+}
+
 .notifBlock {
-  background-color: #fefefe;
+  background-color: var(--dark-green);
   margin: 15% auto;
   padding: 20px;
   border-radius: 10px;
   width: 450px;
-  border: 2px solid var(--dark-green);
+  border: 2px solid var(--white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 300px;
 }
 
-.scrole{
-    overflow-y: auto;
-    height: 200px;
+.allNotif {
+  overflow-y: auto;
+  height: 200px;
 
 }
-.scrole::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+
+.allNotif::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }
-.scrole {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+
+.allNotif {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
-.scrole::-webkit-scrollbar-thumb {
-    background: transparent;
+
+.allNotif::-webkit-scrollbar-thumb {
+  background: transparent;
 }
+
+
+
+
+
+
 
 .shrink {
   transition: 1s ease;
