@@ -5,9 +5,19 @@ const categorieError = document.getElementById('categorieError');
 const modalNotif = document.getElementById('notifModal');
 var postRow = document.getElementsByClassName('postRow');
 
+const Users = document.getElementsByClassName('user');
+const messageBlock = document.getElementById('Message');
+
+
+
 addListenerToLike(postRow, 'click')
 
 addListenerToDislike(postRow, 'click')
+
+addListenerToUsers(Users, function(show) {
+    messageBlock.style.display = show ? "block" : "none";
+});
+
 
 const createPostButton = document.getElementById('createPostButton')
 createPostButton.addEventListener('click', function (event) {
@@ -76,6 +86,30 @@ function addListenerToLike(collection, action) {
 
     }
 }
+
+function addListenerToUsers(collection, action) {
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].addEventListener("click", function() {
+            const isAlreadySelected = collection[i].classList.contains("selected");
+
+            for (let j = 0; j < collection.length; j++) {
+                collection[j].classList.remove("selected");
+            }
+
+            if (isAlreadySelected) {
+                action(false);
+            } else {
+                collection[i].classList.add("selected");
+                action(true);
+            }
+        });
+    }
+}
+
+
+
+
+
 
 function addListenerToDislike(collection, action) {
     for (let i = 0; i < collection.length; i++) {

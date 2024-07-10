@@ -131,7 +131,7 @@
 
 .right-sidebar {
   flex-basis: 22%;
-  height: 80vh;
+  height: 83vh;
 }
 
 #profile,
@@ -363,7 +363,6 @@ legend {
 .allNotif {
   overflow-y: auto;
   height: 200px;
-
 }
 
 .allNotif::-webkit-scrollbar {
@@ -383,12 +382,116 @@ legend {
 .allNotif::-webkit-scrollbar-thumb {
   background: transparent;
 }
+/* ********************************************************/ 
+
+.MessageBlock{
+  overflow-y: auto;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 3px;
+}
+
+.MessageBlock::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+.MessageBlock {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.MessageBlock::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+#Message {
+  width: 275px;
+  height: 300px;
+  border: 2px solid var(--dark-green);
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 10px;
+  display: none;
+  
+}
 
 
+.receive {
+  align-self: flex-start;
+  /* border: 2px solid var(--dark-green); */
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 10px 10px 10px 0;
+  padding: 8px;
+  max-width: 60%;
+}
 
+.send {
+  align-self: flex-end;
+  border: 2px solid var(--dark-green);
+  background-color: var(--dark-green);
+  color: var(--white);
+  border-radius: 10px 10px 0 10px;
+  padding: 8px;
+  max-width: 60%;
+}
 
+.receive p,
+.send p {
+  margin: 0;
+  font-size: 15px;
+  padding: 2px;
+}
 
+.User-view {
+  overflow-y: auto;
+  height: 200px;
+  border: 2px solid var(--dark-green);
+  border-radius: 10px;
+  width: 270px;
+  margin-left: 12px;
+}
 
+.User-view::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+.User-view {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.messageForm{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.messageForm input{
+  background-color: var(--light-grey);
+  border-radius: 10px;
+}
+
+.sendMessage{
+  margin-top: 20px;
+}
+
+.User-view::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* |||||||||||||||||||||||||||||||||||||| */
 
 .shrink {
   transition: 1s ease;
