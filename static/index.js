@@ -5,10 +5,10 @@ const categorieError = document.getElementById('categorieError');
 const modalNotif = document.getElementById('notifModal');
 var postRow = document.getElementsByClassName('postRow');
 
+const commentModal = document.querySelector("#commentModal");
+
 const Users = document.getElementsByClassName('user');
 const messageBlock = document.getElementById('Message');
-
-
 
 addListenerToLike(postRow, 'click')
 
@@ -18,6 +18,27 @@ addListenerToUsers(Users, function(show) {
     messageBlock.style.display = show ? "block" : "none";
 });
 
+document.querySelectorAll(".shrink").forEach(el => {
+    el.addEventListener("click", (e)=>{
+        // Récupération du contenu du post
+        let post = el.parentNode.parentNode;
+        let author = post.querySelector(".user-profile p")?.textContent;
+        let date = post.querySelector(".user-profile span")?.textContent;
+        let content = post.querySelector(".postText")?.textContent;
+        let categories = post.querySelector(".postCategories")?.textContent;
+        let imageUrl = post.querySelector(".postImage")?.src;
+        
+        // Remplir les informations du modal
+        document.querySelector("#comment-post-image").src = imageUrl;
+        document.querySelector("#comment-post-author").textContent = author;
+        document.querySelector("#comment-post-date").textContent = date;
+        document.querySelector("#comment-post-categories").textContent = categories;
+        document.querySelector("#comment-post-text").textContent = content;
+        
+        // Afficher le modal
+        commentModal.style.display = "flex";
+    });
+});
 
 const createPostButton = document.getElementById('createPostButton')
 createPostButton.addEventListener('click', function (event) {
@@ -50,8 +71,8 @@ createPostForm.addEventListener("submit", (event) => {
 
 
 window.onclick = function (event) {
-    if (event.target === modalCreatePost || event.target === modalNotif){
-        closeModal();
+    if (event.target === modalCreatePost || event.target === modalNotif || event.target === commentModal){
+        closeModal(event.target);
     }
 }
 
@@ -107,10 +128,6 @@ function addListenerToUsers(collection, action) {
 }
 
 
-
-
-
-
 function addListenerToDislike(collection, action) {
     for (let i = 0; i < collection.length; i++) {
         const divUp = collection[i].getElementsByClassName('upDiv')[0];
@@ -145,9 +162,8 @@ function openCreatePostModal() {
     modalCreatePost.style.display = 'block';
 }
 
-function closeModal() {
-    modalCreatePost.style.display = 'none';
-    modalNotif.style.display = 'none';
+function closeModal(el) {
+    el.style.display = 'none';
 }
 
 

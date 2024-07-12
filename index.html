@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div id="modal">
+
+    </div>
     <div id="app">
 
         <!-- *********************************************************************************** -->
@@ -120,14 +123,132 @@
                 </div>
             </div>
 
+            <div id="commentModal">
+                <div id="commentModal-body">
+                    <div id="post-zone">
+                        <div  id="comment-post-image-zone">
+                            <img id="comment-post-image" src="" alt="">
+                        </div>
+                        <div id="comment-post-content">
+                            <span id="comment-post-author"></span>
+                            <span id="comment-post-date"></span>
+                            <span id="comment-post-categories"></span>
+                            <span id="comment-post-text"></span>
+                        </div>
+                    </div>
+
+                    <div id="comments-zone">
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+
+                        <div class="single-comment">
+                            <span class="single-comment-author-date">
+                                <span class="single-comment-author">Anna Ndiaye</span>
+                                <span class="single-comment-date">31/12/2024</span>
+                            </span>
+                            <span class="single-comment-text">Wouy sama ndey</span>
+                        </div>
+                    </div>
+                    <div id="new-comment-zone">
+                        <input type="text" id="new-comment-input">
+                        <button id="new-comment-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+
             <nav>
                 <div class="nav-left">
                     <h1 id="titleHome">Forum</h&>
                 </div>
                 <div class="nav-right">
                     <ul>
-                        <li><img class="shrink" src="./static/images/notification.svg" id="notif"></li>
-                        <li><img class="shrink" src="./static/images/log-out.svg"></li>
+                        <li><img class="shrink1" src="./static/images/notification.svg" id="notif"></li>
+                        <li><img class="shrink1" src="./static/images/log-out.svg"></li>
                     </ul>
                 </div>
             </nav>
@@ -146,38 +267,36 @@
                 <div class="main-content">
 
                     <!-- ***************************************************************** -->
-
-                    <div class="post-container">
-                        <div class="user-prfile">
-                            <img src="./static/images/user-alt.svg">
-                            <div>
-                                <p>Uchiwa Itachi</p>
-                                <span>November 09 2025, 10:09 am</span>
+                        <div class="post-container">
+                            <div class="user-profile">
+                                <img src="./static/images/user-alt.svg">
+                                <div>
+                                    <p>Uchiwa Itachi</p>
+                                    <span>November 09 2025, 10:09 am</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="postCategories">Here are the categories</div>
+                            <div class="postCategories">Here are the categories</div>
 
-                        <p class="postText">Red moon, run</p>
+                            <p class="postText">Red moon, run</p>
 
-                        <img src="./static/images/posts/Itachi.jpg" class="postImage">
+                            <img src="./static/images/posts/Itachi.jpg" class="postImage">
 
-                        <div class="postRow">
-                            <div class="upDiv"> <img data-count="1403" class="shrink up"
-                                    src="./static/images/thumbs-up.svg">
-                                <p>1403</p>
+                            <div class="postRow">
+                                <div class="upDiv"> <img data-count="1403" class="shrink1 up"
+                                        src="./static/images/thumbs-up.svg">
+                                    <p>1403</p>
+                                </div>
+                                <div class="downDiv"> <img class="shrink1 down" src="./static/images/thumbs-down-green.svg">
+                                    <p>102</p>
+                                </div>
+                                <div class="shrink"> <img  src="./static/images/comments-regular.svg">1315</div>
                             </div>
-                            <div class="downDiv"> <img class="shrink down" src="./static/images/thumbs-down-green.svg">
-                                <p>102</p>
-                            </div>
-                            <div> <img class="shrink" src="./static/images/comments-regular.svg">1315</div>
-                        </div>
-                    </div>
+                        </div>                 
 
                     <!-- ***************************************************************** -->
-
-                    <div class="post-container">
-                        <div class="user-prfile">
+                        <div class="post-container">
+                        <div class="user-profile">
                             <img src="./static/images/user-alt.svg">
                             <div>
                                 <p>JELEE</p>
@@ -192,20 +311,19 @@
                         <img src="./static/images/posts/JELEE.png" class="postImage">
 
                         <div class="postRow">
-                            <div class="upDiv"><img class="shrink up" src="./static/images/thumbs-up-green.svg">
+                            <div class="upDiv"><img class="shrink1 up" src="./static/images/thumbs-up-green.svg">
                                 <p>925</p>
                             </div>
-                            <div class="downDiv"> <img class="shrink down" src="./static/images/thumbs-down.svg">
+                            <div class="downDiv"> <img class="shrink1 down" src="./static/images/thumbs-down.svg">
                                 <p>456</p>
                             </div>
-                            <div> <img class="shrink" src="./static/images/comments-regular.svg"> 355</div>
+                            <div class="shrink"> <img  src="./static/images/comments-regular.svg"> 355</div>
                         </div>
-                    </div>
+                        </div>
 
                     <!-- ***************************************************************** -->
-
-                    <div class="post-container">
-                        <div class="user-prfile">
+                        <div class="post-container">
+                        <div class="user-profile">
                             <img src="./static/images/user-alt.svg">
                             <div>
                                 <p>Tanaka Aiko</p>
@@ -220,43 +338,44 @@
                         <img src="./static/images/posts/TanakAiko.jpeg" class="postImage">
 
                         <div class="postRow">
-                            <div class="upDiv"> <img class="shrink up" src="./static/images/thumbs-up-green.svg">
+                            <div class="upDiv"> <img class="shrink1 up" src="./static/images/thumbs-up-green.svg">
                                 <p>121</p>
                             </div>
-                            <div class="downDiv"> <img class="shrink down" src="./static/images/thumbs-down.svg">
+                            <div class="downDiv"> <img class="shrink1 down" src="./static/images/thumbs-down.svg">
                                 <p>32</p>
                             </div>
-                            <div> <img class="shrink" src="./static/images/comments-regular.svg"> 39</div>
+                            <div class="shrink"> <img class="shrink" src="./static/images/comments-regular.svg"> 39</div>
                         </div>
-                    </div>
+                        </div>
 
                     <!-- ***************************************************************** -->
+                   
+                        <div class="post-container">
+                            <div class="user-profile">
+                                <img src="./static/images/user-alt.svg">
+                                <div>
+                                    <p>Amiya</p>
+                                    <span>February 21 2025, 12:40 pm</span>
+                                </div>
+                            </div>
 
-                    <div class="post-container">
-                        <div class="user-prfile">
-                            <img src="./static/images/user-alt.svg">
-                            <div>
-                                <p>Amiya</p>
-                                <span>February 21 2025, 12:40 pm</span>
+                            <div class="postCategories">Here are the categories</div>
+
+                            <p class="postText">I'm sorry. I would save this city.</p>
+
+                            <img src="./static/images/posts/Amiya.jpg" class="postImage">
+
+                            <div class="postRow">
+                                <div class="upDiv"> <img class="shrink1 up" src="./static/images/thumbs-up.svg">
+                                    <p>21</p>
+                                </div>
+                                <div class="downDiv"> <img class="shrink1 down" src="./static/images/thumbs-down.svg">
+                                    <p>0</p>
+                                </div>
+                                <div class="shrink"> <img class="shrink" src="./static/images/comments-regular.svg"> 2</div>
                             </div>
                         </div>
-
-                        <div class="postCategories">Here are the categories</div>
-
-                        <p class="postText">I'm sorry. I would save this city.</p>
-
-                        <img src="./static/images/posts/Amiya.jpg" class="postImage">
-
-                        <div class="postRow">
-                            <div class="upDiv"> <img class="shrink up" src="./static/images/thumbs-up.svg">
-                                <p>21</p>
-                            </div>
-                            <div class="downDiv"> <img class="shrink down" src="./static/images/thumbs-down.svg">
-                                <p>0</p>
-                            </div>
-                            <div> <img class="shrink" src="./static/images/comments-regular.svg"> 2</div>
-                        </div>
-                    </div>
+    
 
                 </div>
 
@@ -270,28 +389,28 @@
                         </div>
 
                         <div class="User-view">
-                            <div class="onlineList shrink user">
+                            <div class="onlineList shrink1 user">
                                 <div class="online">
                                     <img src="./static/images/user-alt.svg">
                                 </div>
                                 <p>Tanaka Aiko</p>
                             </div>
     
-                            <div class="onlineList shrink user">
+                            <div class="onlineList shrink1 user">
                                 <div class="online">
                                     <img src="./static/images/user-alt.svg">
                                 </div>
                                 <p>JELEE</p>
                             </div>
     
-                            <div class="onlineList shrink user">
+                            <div class="onlineList shrink1 user">
                                 <div class="online">
                                     <img src="./static/images/user-alt.svg">
                                 </div>
                                 <p>Uchiwa Itachi</p>
                             </div>
 
-                            <div class="onlineList shrink user">
+                            <div class="onlineList shrink1 user">
                                 <div class="online">
                                     <img src="./static/images/user-alt.svg">
                                 </div>
