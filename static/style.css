@@ -504,9 +504,9 @@ legend {
 }
 /* ********************************************************/
 
-.MessageBlock {
+#MessageBlock {
   overflow-y: auto;
-  height: 220px;
+  height: 330px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -533,12 +533,11 @@ legend {
 }
 
 #Message {
-  width: 275px;
-  height: 300px;
+  width: 100%;
+  height: 48vh;
   border: 2px solid var(--dark-green);
   border-radius: 10px;
-  margin-top: 25px;
-  margin-left: 9%;
+  margin: 40px 0;
   display: none;
 }
 
@@ -574,8 +573,8 @@ legend {
   height: 200px;
   border: 2px solid var(--dark-green);
   border-radius: 10px;
-  width: 270px;
-  margin-left: 9%;
+  width: 100%;
+  /* margin-left: 9%; */
   /* margin-right: 2px; */
   /* align-self: center; */
 }
